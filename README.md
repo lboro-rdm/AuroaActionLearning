@@ -1,2 +1,4 @@
 # AuroaActionLearning
-An app that askes questions from the Aurora Action Learning Set
+An app that asks questions from the Aurora Action Learning Set.
+
+Shared under a CC-BY-NC licence.
