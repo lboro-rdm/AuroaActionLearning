@@ -8,6 +8,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
   
   p("Welcome to the Action Learning Bot!"),
   p("Take a moment for yourself. Block out your calendar and close your email."),
+  p("Think about a challenge or opportunity that you would like to reflect on."),
   p("Spend a few minutes journaling about each question. Even if a question seems irrelevant, it might spark unexpected insights."),
   p("Embrace the journey of discovery and enjoy the process!"),
   

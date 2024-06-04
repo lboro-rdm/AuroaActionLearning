@@ -1,0 +1,12 @@
+name: AuroaActionLearning
+title: AuroaActionLearning
+username: research-data-lboro
+account: research-data-lboro
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12123770
+bundleId: 8700058
+url: https://research-data-lboro.shinyapps.io/AuroaActionLearning/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
