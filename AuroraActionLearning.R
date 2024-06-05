@@ -7,10 +7,23 @@ library(readr)
 ui <- fluidPage(theme = shinytheme("lumen"),
                 titlePanel("Action Learning Bot"),
                 
+                tags$style(HTML("
+    .image-container {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    .alt-text {
+      margin-top: 20px;
+      font-size: 16px;
+      font-style: italic;
+      text-align: center;
+    }
+  ")),
+                
                 p("Welcome to the Action Learning Bot!"),
                 p("Take a moment for yourself. Block out your calendar and close your email."),
                 p("Think about a challenge or opportunity that you would like to reflect on."),
-                p("Spend a few minutes journaling about each question. Even if a question seems irrelevant, it might spark unexpected insights."),
+                p("Spend a few minutes journaling about each question. Even if a question seems irrelevant, it might spark unexpected insights. Keep writing for 3-5 minutes."),
                 p("Embrace the journey of discovery and enjoy the process!"),
                 
                 sidebarLayout(
@@ -20,11 +33,14 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                     p(),
                     p("This bot was created by Lara Skelly (Loughborough University). The code is shared on ", a("GitHub", href = "https://github.com/lboro-rdm/AuroaActionLearning.git"), " under a CC-BY-NC licence."),
                     p(),
-                    p("It was created with the questions which were part of the ", a("AdvancedHE Aurora programme.", href = "https://www.advance-he.ac.uk/programmes-events/developing-leadership/aurora"))
+                    p("It was created with the questions which were part of the ", a("AdvancedHE Aurora programme.", href = "https://www.advance-he.ac.uk/programmes-events/developing-leadership/aurora")),
+                    p(),
+                    h3("If you are new to Action learning..."),
+                    p("Action learning is a reflective exercise usually done in a small group. One person discusses a particular situation that they would like more insight on, while the others pose questions as this bot is doing.")
                   ),
                   mainPanel(
-                    imageOutput("randomImage"),
-                    textOutput("imageAltText")
+                    div(class = "image-container", imageOutput("randomImage")),
+                    div(class = "alt-text", textOutput("imageAltText"))
                   )
                 )
 )
