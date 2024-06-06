@@ -10,13 +10,22 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                 tags$style(HTML("
     .image-container {
       text-align: center;
-      margin-bottom: 100px;
+      margin-bottom: 10px;
     }
     .alt-text {
-      margin-top: 20px;
+      margin-top: 10px;
       font-size: 16px;
       font-style: italic;
       text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image {
+      width: 100%;
+      max-width: 800px;
     }
   ")),
                 
@@ -39,8 +48,10 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                     p("Action learning is a reflective exercise usually done in a small group. One person discusses a particular situation that they would like more insight on, while the others pose questions as this bot is doing.")
                   ),
                   mainPanel(
-                    div(class = "image-container", imageOutput("randomImage")),
-                    div(class = "alt-text", textOutput("imageAltText"))
+                    div(class = "container", 
+                        div(class = "image", imageOutput("randomImage")),
+                        div(class = "alt-text", textOutput("imageAltText"))
+                    )
                   )
                 )
 )
